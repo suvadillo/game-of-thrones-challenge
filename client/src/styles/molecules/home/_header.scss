@@ -1,0 +1,41 @@
+.home-header {
+  background: $gradient;
+  width: 100%;
+  height: 100vh;
+  padding: $mainPadding;
+  #home-header-sections {
+    max-width: $mainWidth;
+    margin: $mainMargin;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    section {
+      color: color(textHeader);
+      height: calc(100vh - 100px);
+      display: grid;
+      align-content: center;
+      h1 {
+        font-weight: 900;
+        opacity: 0.6;
+        span {
+          text-transform: uppercase;
+        }
+      }
+      h2 {
+        margin: 6px 0 40px 0;
+        span {
+          text-transform: lowercase;
+        }
+      }
+    }
+    #home-header-left {
+      padding-left: $sidesPadding;
+    }
+    #home-header-right {
+      display: grid;
+      justify-items: center;
+      img {
+        width:90%;
+      }
+    }
+  }
+}

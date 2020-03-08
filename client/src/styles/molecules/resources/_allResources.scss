@@ -1,0 +1,23 @@
+.section-all-resources {
+  padding: 76px $sidesPadding;
+  background-color: color(backgroundSection);
+  display: grid;
+  grid-auto-rows: auto auto;
+  grid-gap: 10px;
+  min-height: calc(100vh - #{$heightNavbar});
+}
+
+.list-all-resources {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  .no-results {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}

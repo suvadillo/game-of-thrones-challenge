@@ -1,0 +1,45 @@
+.article-home {
+  background-color: color(textHeader);
+  border-radius: $mainRadius;
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: 3fr 1fr;
+  color: color(textArticle);
+  max-height: 108px;
+  h3 {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.5rem;
+  }
+  > div {
+    &:first-child {
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      img {
+        max-width: 100%;
+      }
+    }
+    &:last-child {
+      display: grid;
+      align-content: center;
+      h3 {
+        font-weight: 900;
+      }
+      p {
+        margin: 20px 0 71px 0;
+        font-weight: 300;
+      }
+    }
+    a {
+      color: color(textArticle);
+      background-color: color(button);
+      max-width: 80%;
+      border-radius: 5px;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+  }
+}

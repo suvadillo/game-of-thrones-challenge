@@ -1,0 +1,20 @@
+$colors: (
+  textHeader: #FFFFFF,
+  textArticle: #263239,
+  placeholder: lighten(#585857, 40%),
+  gradientTop: #263239,
+  gradientTopDark: darken(#263239, 7%), 
+  gradientTopLight: lighten(#263239, 25%),
+  error: #aa2109, 
+  warning: lighten(#b76729, 5%),
+  gradientBottom: #cbb7a8,
+  gradientBottomLight: lighten(#cbb7a8, 15%),
+  button: #71b9a3,
+  buttonLighter: lighten(#71b9a3, 10%),
+  // backgroundSection: #E5E5E5
+  backgroundSection: #cbb7a8
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

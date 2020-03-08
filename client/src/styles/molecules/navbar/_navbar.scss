@@ -1,0 +1,42 @@
+.navbar {
+  max-width: $mainWidth;
+  margin: $mainMargin;
+  height: $heightNavbar;
+  background: transparent;
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  padding: 0 $sidesPadding;
+  z-index: 1;
+  a {
+    color: color(textHeader);
+  }
+  .is-hide-navbar {
+    opacity: 0;
+    visibility: hidden;
+  }
+  ul {
+    justify-self: end;
+    display: grid;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 26px;
+    button {
+      color: color(textHeader);
+    }
+    li {
+      position: relative;
+    }
+    .activeLink {
+      &::after{
+        content: '';
+        position: absolute;
+        border-bottom: 3px solid color(gradientTopDark);
+        padding: 5px;
+        left: 0;
+        bottom: -5px;
+        width: 90%;
+      }
+    }
+  }
+}

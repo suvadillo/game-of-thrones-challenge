@@ -1,0 +1,15 @@
+.error-container {
+  margin-top: -100px;
+  color: color(textHeader);
+  section {
+    height: 100vh;
+    background: $gradient;
+    padding: $mainPadding 0 0;
+    .error-inside-container {
+      height: 100%;
+      padding: 100px $sidesPadding;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

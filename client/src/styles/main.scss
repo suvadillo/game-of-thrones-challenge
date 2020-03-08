@@ -1,0 +1,28 @@
+// GLOBALS
+@import 'globals/colors';
+@import 'globals/font-size';
+@import 'globals/fonts';
+@import 'globals/media-queries';
+@import 'globals/settings';
+@import 'globals/variables';
+
+// ATOMS
+@import 'atoms/article';
+@import 'atoms/resources';
+
+// MOLECULES
+@import 'molecules/navbar/navbar';
+@import 'molecules/home/header';
+@import 'molecules/home/section';
+@import 'molecules/resources/allResources';
+// @import 'molecules/resources/card';
+
+// ORGANISMS
+@import 'organisms/home';
+@import 'organisms/auth';
+@import 'organisms/allResources';
+@import 'organisms/singleResource';
+@import 'organisms/errors/error';
+
+// PAGES
+@import 'pages/app';

@@ -1,0 +1,83 @@
+.auth-container {
+  margin-top: -100px;
+  color: color(textArticle);
+  section {
+    height: 100vh;
+    background: $gradient;
+    padding: $mainPadding 0 0;
+    .auth-form-container {
+      height: 100%;
+      padding: 0 $sidesPadding;
+      %error-message {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
+        border-radius: $mainRadius;
+        margin: 0;
+        height: 75px;
+        background-color: color(error);
+        color: color(textHeader);
+        text-align: center;
+        display: grid;
+        align-items: center;
+        margin-top: 15px;
+      }
+      .is-visible {
+        @extend %error-message;
+      }
+      .is-hide {
+        @extend %error-message;
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+      }
+      form {
+        background-color: color(gradientBottomLight);
+        border-radius: $mainRadius;
+        height: 381px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 75px;
+        align-content: center;
+        padding: $sidesPadding;
+        grid-gap: 15px;
+        > * {
+          display: grid;
+          align-items: end;
+        }
+        .is-invalid {
+          transition: all 0.3s;
+          border: 3px solid color(error);
+          &::placeholder {
+            color: color(error);
+          }
+        }
+        input {
+          padding: 0 15px;
+          border: 2px solid color(gradientTopDark);
+          border-radius: $mainRadius;
+          text-align: center;
+          color: color(textArticle);
+          transition: all 0.3s;
+          &::placeholder {
+            text-transform: capitalize;
+            color: color(placeholder);
+          }
+        }
+        button {
+          color: color(textArticle);
+          background-color: color(button);
+          border-radius: $mainRadius;
+          text-align: center;
+          padding: 15px 0;
+          transition: all 0.3s;
+          &:disabled {
+            transition: all 0.3s;
+            background-color: lighten(color(button), 20%);
+            color: lighten(color(textArticle), 40%);
+          }
+        }
+      }
+    }
+  }
+}

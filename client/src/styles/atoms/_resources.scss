@@ -1,0 +1,97 @@
+.section-search-controls {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  .simple-search {
+    h3{
+      height: 75px;
+    }
+    .type-resource {
+      height: 75px;
+      input {
+        margin-right: 10px;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        background-color: color(buttonLighter);
+      }
+      .active {
+        background-color: color(gradientTopLight);
+        color: white;
+      }
+    }
+  }
+  .advanced-search {
+    padding-right: 5%;
+    .filters {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 50% 50%;
+      button {
+        color: #263239;
+        background-color: color(button);
+        max-width: 60%;
+        border-radius: 5px;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      .type-resource {
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      input {
+        font-size: 1.2rem;
+        padding-left: 2px;
+      }
+      .inside-filters {
+        display: grid;
+        grid-gap: 5px;
+        .warning {
+          %warning-message {
+            opacity: 1;
+            transition: all 0.3s;
+            border-radius: $mainRadius;
+            margin: 0;
+            font-size: 1.2rem;
+            height: 50px;
+            background-color: color(warning);
+            color: color(textHeader);
+            text-align: center;
+            display: grid;
+            align-items: center;
+          }
+          .is-visible {
+            @extend %warning-message;
+          }
+          .is-hide {
+            @extend %warning-message;
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+      .inside-filters.hidden {
+        display: none;
+      }
+      .inside-filters:nth-child(2) {
+        border-left: solid 1px color(gradientTop);
+        padding-left: 10px;
+      }
+    }
+    h3 {
+      height: 75px;
+    }
+  }
+  .advanced-search-button {
+    padding: 10px;
+    text-align: right;
+  }
+  .toggle-advanced-search {
+    white-space: normal;
+    font-size: 1.4rem;
+  }
+}
+
+
+
